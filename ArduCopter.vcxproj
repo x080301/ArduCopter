@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C5F80730-F44F-4478-BDAE-6634EFC2CA88}</ProjectGuid>
+    <RootNamespace>
+    </RootNamespace>
+    <ProjectName>ArduCopter</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>
+    </PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>
+    </PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>
+    </PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>
+    </PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\ArduCopter;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Common;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Progmem;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Menu;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Param;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\StorageManager;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_HAL;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_HAL_AVR;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_HAL_AVR_SITL;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_HAL_PX4;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_HAL_VRBRAIN;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_HAL_FLYMAPLE;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_HAL_Linux;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_HAL_Empty;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\GCS_MAVLink;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_GPS;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\DataFlash;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_ADC;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_ADC_AnalogSource;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Baro;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Compass;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Math;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Curve;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_InertialSensor;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_AHRS;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_NavEKF;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Mission;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Rally;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AC_PID;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AC_AttitudeControl;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\RC_Channel;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Motors;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_RangeFinder;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_OpticalFlow;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\Filter;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Buffer;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Relay;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_ServoRelayEvents;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Camera;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Mount;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Airspeed;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Vehicle;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_InertialNav;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AC_WPNav;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Declination;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AC_Fence;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\SITL;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Scheduler;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_RCMapper;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Notify;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_BattMonitor;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_BoardConfig;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Frsky_Telem;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AC_Sprayer;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_EPM;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Parachute;$(ProjectDir)..\..\ardupilot-ArduCopter-3.2.1-apm-px4\libraries\AP_Terrain;$(ProjectDir)..\libraries\AP_Common;$(ProjectDir)..\libraries\AP_Progmem;$(ProjectDir)..\libraries\AP_Menu;$(ProjectDir)..\libraries\AP_Param;$(ProjectDir)..\libraries\StorageManager;$(ProjectDir)..\libraries\AP_HAL;$(ProjectDir)..\libraries\AP_HAL\utility;$(ProjectDir)..\libraries\AP_HAL_AVR;$(ProjectDir)..\libraries\AP_HAL_AVR\utility;$(ProjectDir)..\libraries\AP_HAL_AVR_SITL;$(ProjectDir)..\libraries\AP_HAL_PX4;$(ProjectDir)..\libraries\AP_HAL_VRBRAIN;$(ProjectDir)..\libraries\AP_HAL_FLYMAPLE;$(ProjectDir)..\libraries\AP_HAL_FLYMAPLE\utility;$(ProjectDir)..\libraries\AP_HAL_Linux;$(ProjectDir)..\libraries\AP_HAL_Empty;$(ProjectDir)..\libraries\GCS_MAVLink;$(ProjectDir)..\libraries\AP_GPS;$(ProjectDir)..\libraries\DataFlash;$(ProjectDir)..\libraries\AP_ADC;$(ProjectDir)..\libraries\AP_ADC_AnalogSource;$(ProjectDir)..\libraries\AP_Baro;$(ProjectDir)..\libraries\AP_Compass;$(ProjectDir)..\libraries\AP_Math;$(ProjectDir)..\libraries\AP_Curve;$(ProjectDir)..\libraries\AP_InertialSensor;$(ProjectDir)..\libraries\AP_AHRS;$(ProjectDir)..\libraries\AP_NavEKF;$(ProjectDir)..\libraries\AP_Mission;$(ProjectDir)..\libraries\AP_Rally;$(ProjectDir)..\libraries\AC_PID;$(ProjectDir)..\libraries\AC_AttitudeControl;$(ProjectDir)..\libraries\RC_Channel;$(ProjectDir)..\libraries\AP_Motors;$(ProjectDir)..\libraries\AP_RangeFinder;$(ProjectDir)..\libraries\AP_OpticalFlow;$(ProjectDir)..\libraries\Filter;$(ProjectDir)..\libraries\AP_Buffer;$(ProjectDir)..\libraries\AP_Relay;$(ProjectDir)..\libraries\AP_ServoRelayEvents;$(ProjectDir)..\libraries\AP_Camera;$(ProjectDir)..\libraries\AP_Mount;$(ProjectDir)..\libraries\AP_Airspeed;$(ProjectDir)..\libraries\AP_Vehicle;$(ProjectDir)..\libraries\AP_InertialNav;$(ProjectDir)..\libraries\AC_WPNav;$(ProjectDir)..\libraries\AP_Declination;$(ProjectDir)..\libraries\AC_Fence;$(ProjectDir)..\libraries\SITL;$(ProjectDir)..\libraries\AP_Scheduler;$(ProjectDir)..\libraries\AP_RCMapper;$(ProjectDir)..\libraries\AP_Notify;$(ProjectDir)..\libraries\AP_BattMonitor;$(ProjectDir)..\libraries\AP_BoardConfig;$(ProjectDir)..\libraries\AP_Frsky_Telem;$(ProjectDir)..\libraries\AC_Sprayer;$(ProjectDir)..\libraries\AP_EPM;$(ProjectDir)..\libraries\AP_Parachute;$(ProjectDir)..\libraries\AP_Terrain;$(ProjectDir)..\libraries;$(ProjectDir)..\hardware\apm\libraries;$(ProjectDir)..\Warehouse\libraries;$(ProjectDir)..\hardware\tools\\avr\avr\include;$(ProjectDir)..\hardware\tools\\avr\avr\include\avr;$(ProjectDir)..\hardware\tools\\avr\avr\include\util;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ProjectDir)__vm\.ArduCopter.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>__AVR_ATmega2560__;ARDUINO=10900;ARDUINO_MAIN;__AVR__;__avr__;F_CPU=16000000L;__cplusplus=201103L;ARDUINO_ARCH_AVR;ARDUINO_AVR_APM_APM_AVR_APM2_2560HAL;CONFIG_HAL_BOARD=HAL_BOARD_APM2;EXCLUDECORE;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\ArduCopter;$(ProjectDir)..\libraries\AP_Common;$(ProjectDir)..\libraries\AP_Progmem;$(ProjectDir)..\libraries\AP_Menu;$(ProjectDir)..\libraries\AP_Param;$(ProjectDir)..\libraries\StorageManager;$(ProjectDir)..\libraries\AP_HAL;$(ProjectDir)..\libraries\AP_HAL\utility;$(ProjectDir)..\libraries\AP_HAL_AVR;$(ProjectDir)..\libraries\AP_HAL_AVR\utility;$(ProjectDir)..\libraries\AP_HAL_AVR_SITL;$(ProjectDir)..\libraries\AP_HAL_PX4;$(ProjectDir)..\libraries\AP_HAL_VRBRAIN;$(ProjectDir)..\libraries\AP_HAL_FLYMAPLE;$(ProjectDir)..\libraries\AP_HAL_FLYMAPLE\utility;$(ProjectDir)..\libraries\AP_HAL_Linux;$(ProjectDir)..\libraries\AP_HAL_Empty;$(ProjectDir)..\libraries\GCS_MAVLink;$(ProjectDir)..\libraries\AP_GPS;$(ProjectDir)..\libraries\DataFlash;$(ProjectDir)..\libraries\AP_ADC;$(ProjectDir)..\libraries\AP_ADC_AnalogSource;$(ProjectDir)..\libraries\AP_Baro;$(ProjectDir)..\libraries\AP_Compass;$(ProjectDir)..\libraries\AP_Math;$(ProjectDir)..\libraries\AP_Curve;$(ProjectDir)..\libraries\AP_InertialSensor;$(ProjectDir)..\libraries\AP_AHRS;$(ProjectDir)..\libraries\AP_NavEKF;$(ProjectDir)..\libraries\AP_Mission;$(ProjectDir)..\libraries\AP_Rally;$(ProjectDir)..\libraries\AC_PID;$(ProjectDir)..\libraries\AC_AttitudeControl;$(ProjectDir)..\libraries\RC_Channel;$(ProjectDir)..\libraries\AP_Motors;$(ProjectDir)..\libraries\AP_RangeFinder;$(ProjectDir)..\libraries\AP_OpticalFlow;$(ProjectDir)..\libraries\Filter;$(ProjectDir)..\libraries\AP_Buffer;$(ProjectDir)..\libraries\AP_Relay;$(ProjectDir)..\libraries\AP_ServoRelayEvents;$(ProjectDir)..\libraries\AP_Camera;$(ProjectDir)..\libraries\AP_Mount;$(ProjectDir)..\libraries\AP_Airspeed;$(ProjectDir)..\libraries\AP_Vehicle;$(ProjectDir)..\libraries\AP_InertialNav;$(ProjectDir)..\libraries\AC_WPNav;$(ProjectDir)..\libraries\AP_Declination;$(ProjectDir)..\libraries\AC_Fence;$(ProjectDir)..\libraries\SITL;$(ProjectDir)..\libraries\AP_Scheduler;$(ProjectDir)..\libraries\AP_RCMapper;$(ProjectDir)..\libraries\AP_Notify;$(ProjectDir)..\libraries\AP_BattMonitor;$(ProjectDir)..\libraries\AP_BoardConfig;$(ProjectDir)..\libraries\AP_Frsky_Telem;$(ProjectDir)..\libraries\AC_Sprayer;$(ProjectDir)..\libraries\AP_EPM;$(ProjectDir)..\libraries\AP_Parachute;$(ProjectDir)..\libraries\AP_Terrain;$(ProjectDir)..\libraries;$(ProjectDir)..\hardware\apm\libraries;$(ProjectDir)..\Warehouse\libraries;$(ProjectDir)..\hardware\tools\\avr\avr\include;$(ProjectDir)..\hardware\tools\\avr\avr\include\avr;$(ProjectDir)..\hardware\tools\\avr\avr\include\util;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ProjectDir)__vm\.ArduCopter.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <PreprocessorDefinitions>__AVR_ATmega2560__;ARDUINO=10900;ARDUINO_MAIN;__AVR__;__avr__;F_CPU=16000000L;__cplusplus=201103L;ARDUINO_ARCH_AVR;ARDUINO_AVR_APM_APM_AVR_APM2_2560HAL;CONFIG_HAL_BOARD=HAL_BOARD_APM2;EXCLUDECORE;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="VisualMicro" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AP_State.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="ArduCopter.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="Attitude.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="commands.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="commands_logic.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="compassmot.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="compat.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="control_acro.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="control_althold.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="control_auto.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="control_autotune.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="control_circle.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="control_drift.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="control_flip.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="control_guided.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="control_land.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="control_loiter.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="control_ofloiter.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="control_poshold.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="control_rtl.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="control_sport.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="control_stabilize.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="crash_check.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="ekf_check.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="events.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="failsafe.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="fence.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="flight_mode.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="GCS_Mavlink.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="heli.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="heli_control_acro.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="heli_control_stabilize.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="inertia.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="land_detector.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="leds.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="Log.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="motors.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="motor_test.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="navigation.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="Parameters.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="perf_info.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="position_vector.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="radio.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="sensors.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="setup.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="switches.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="system.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="test.pde">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="UserCode.pde">
+      <FileType>CppCode</FileType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="APM_Config.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="APM_Config_mavlink_hil.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="compat.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="config_channels.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="defines.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="heli.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="Parameters.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="UserVariables.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="__vm\.ArduCopter.vsarduino.h" />
+  </ItemGroup>
+  <PropertyGroup>
+    <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
