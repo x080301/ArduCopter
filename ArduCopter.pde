@@ -254,7 +254,7 @@ static const AP_InertialSensor::Sample_rate ins_sample_rate = AP_InertialSensor:
 
 static AP_GPS  gps;
 
-static GPS_Glitch gps_glitch(gps);//标签 GPS模块可能在附近，考虑用此模块做其他传感器的参考
+static GPS_Glitch gps_glitch(gps);//
 
 // flight modes convenience array
 static AP_Int8 *flight_modes = &g.flight_mode1;
@@ -358,7 +358,7 @@ static bool sonar_enabled = true; // enable user switch for sonar
  */
 
 //Documentation of GLobals:
-static union {//标签各值的定义，后面可能会用到
+static union {
     struct {
         uint8_t home_is_set         : 1; // 0
         uint8_t simple_mode         : 2; // 1,2 // This is the state of simple mode : 0 = disabled ; 1 = SIMPLE ; 2 = SUPERSIMPLE
@@ -943,7 +943,7 @@ static void perf_update(void)
     perf_info_reset();
     pmTest1 = 0;
 }
-//标签：循环
+//标签：主循环循环体
 void loop()
 {
     // wait for an INS sample
@@ -1611,5 +1611,5 @@ static void tuning(){
     }
 }
 
-AP_HAL_MAIN();
+AP_HAL_MAIN();标签：主程序
 

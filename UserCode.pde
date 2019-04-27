@@ -84,7 +84,7 @@ void land()
     attitude_control.angle_ef_roll_pitch_rate_ef_yaw(wp_nav.get_roll(), wp_nav.get_pitch(), target_yaw_rate);
 }
 
-void autorun()
+void autorun()//标签：我们的代码可以在这儿，以一个mode的形式，由遥控器选定后执行
 {
     //起飞
     takeoff();
@@ -94,7 +94,7 @@ void autorun()
     land();
 }
 
-#ifdef USERHOOK_INIT
+#ifdef USERHOOK_INIT//标签：我们的代码也可以在这儿及以下的部分，会以一定的频率反复执行
 void userhook_init()
 {
     // put your initialisation code here
