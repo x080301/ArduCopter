@@ -88,7 +88,7 @@
 // Auto Pilot modes
 // ----------------
 
-//活跃的模式//最多6个
+//活跃的模式
 #define STABILIZE 0                     // hold level position
 #define LOITER 1                        // Hold a single location
 #define CIRCLE 2                        // AUTO control
