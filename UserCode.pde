@@ -33,6 +33,12 @@ void takeoff()
 
     // roll & pitch from waypoint controller, yaw rate from pilot
     attitude_control.angle_ef_roll_pitch_rate_ef_yaw(wp_nav.get_roll(), wp_nav.get_pitch(), target_yaw_rate);
+
+    float Z_position = inertial_nav.get_altitude();//检测高度以确定什么时候进入降落模块
+    if (Z_position > 50)
+    {
+        processflag = 1;
+    }
 }
 
 void land()
