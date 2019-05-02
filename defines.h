@@ -88,16 +88,18 @@
 // Auto Pilot modes
 // ----------------
 
-//活跃的模式
+//活跃的模式//标签，模式定义
 #define STABILIZE 0                     // hold level position
-#define LOITER 1                        // Hold a single location
-#define CIRCLE 2                        // AUTO control
-#define LAND 3                          // AUTO control
-#define AUTO 4                          // AUTO control//鸠占鹊巢。写自己的代码
+#define AUTO1 1
+#define AUTO2 2
+#define RESET 3
 
 //非活跃模式
 
-
+#define LOITER 1                        // Hold a single location
+#define CIRCLE 2                        // AUTO control
+#define LAND 3                          // AUTO control
+#define AUTO 4                          // AUTO control
 #define ACRO 7                          // rate control
 #define ALT_HOLD 5                      // AUTO control
 #define GUIDED 9                        // AUTO control

@@ -9,7 +9,7 @@
 // optional force parameter used to force the flight mode change (used only first time mode is set)
 // returns true if mode was succesfully set
 // ACRO, STABILIZE, ALTHOLD, LAND, DRIFT and SPORT can always be set successfully but the return state of other flight modes should be checked and the caller should deal with failures appropriately
-static bool set_mode(uint8_t mode)//标签：更改模式
+static bool set_mode(uint8_t mode)
 {
     // boolean to record if flight mode could be set
     bool success = false;
@@ -128,6 +128,26 @@ static void update_flight_mode()
 {
     switch (control_mode) {
 
+    case STABILIZE://飞控控制无人机保持稳定，同时接收遥控器数据。可用于起飞降落
+    #if FRAME_CONFIG == HELI_FRAME
+        heli_stabilize_run();
+    #else
+        stabilize_run();
+    #endif
+        break;
+
+
+    case AUTO1://测试程序1，起飞1m，悬停60s，降落        
+        autorun1();
+        break;
+    case AUTO2://测试程序2，起飞，向东飞行50m，降落
+        autorun2();
+        break;
+    case RESET://重启测试程序中会用到的参数
+        reset();
+        break;
+
+
         /*
         case ACRO://全手动控制
                         
@@ -139,24 +159,17 @@ static void update_flight_mode()
             break;
             */
 
-        case STABILIZE://飞控控制无人机保持稳定，同时接收遥控器数据。可用于起飞降落
-            #if FRAME_CONFIG == HELI_FRAME
-                heli_stabilize_run();
-            #else
-                stabilize_run();
-            #endif
-            break;
+
 
             /*
         case ALT_HOLD://定高模式：除非大幅度更改遥控器油门值，否则无人机保持现有油门量不变
             althold_run();
             break;
-            */
+            
 
         case AUTO://在GPS引导下，按预定任务进行飞行
                         
-            //auto_run();//原本的
-            autorun1();//改写的
+            auto_run();
             break;            
             
 
@@ -168,18 +181,18 @@ static void update_flight_mode()
         case LOITER://GPS（保持平面位置稳定）+气压计（保持高度稳定）
             loiter_run();
             break;
-            
-            /*
+          
+
         case GUIDED://与地面站建立联系后，由地面站数据进行控制
             guided_run();
             break;
-            */
+            
 
         case LAND://降落
             land_run();
             break;
 
-            /*
+            
         case RTL://GPS引导下自动返航<-返航位置见控制模式详解
             rtl_run();
             break;

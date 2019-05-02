@@ -39,19 +39,17 @@ static void read_control_switch()
 
 static uint8_t readSwitch(void)//标签：读mode的选择
 {
-    int16_t pulsewidth2 = g.rc_5.radio_in;   
-    int16_t pulsewidth1 = g.rc_6.radio_in;
+    int16_t pulsewidth1 = g.rc_5.radio_in;   
+    int16_t pulsewidth2 = g.rc_6.radio_in;
     if (pulsewidth1 < 1500)
     {
-        if (pulsewidth2 < 1333) return 0;
-        if (pulsewidth2 < 1666) return 2;
-                                return 4;
+        return RESET;
     }
     else
     {
-        if (pulsewidth2 < 1333) return 1;
-        if (pulsewidth2 > 1666) return 3;
-                                return 5;//空置
+        if (pulsewidth2 < 1333) return STABILIZE;
+        if (pulsewidth2 > 1666) return AUTO1;
+                                return AUTO2;
     }
     /*
     if (pulsewidth < 1231) return 0;
