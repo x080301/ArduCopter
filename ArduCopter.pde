@@ -844,6 +844,8 @@ static const AP_Scheduler::Task scheduler_tasks[] PROGMEM = {
   100  = 1hz
   1000 = 0.1hz
  */
+
+
 static const AP_Scheduler::Task scheduler_tasks[] PROGMEM = {
     { rc_loop,               1,     100 },
     { throttle_loop,         2,     450 },
@@ -889,11 +891,13 @@ static const AP_Scheduler::Task scheduler_tasks[] PROGMEM = {
 #ifdef USERHOOK_SLOWLOOP
     { userhook_SlowLoop,     30,    100 },
 #endif
+#define USERHOOK_SUPERSLOWLOOP
 #ifdef USERHOOK_SUPERSLOWLOOP
     { userhook_SuperSlowLoop,100,   100 },
 #endif
 };
 #endif
+
 
 
 void setup() //标签，初始化程序

@@ -156,7 +156,7 @@ static void update_flight_mode()
         case AUTO://在GPS引导下，按预定任务进行飞行
                         
             //auto_run();//原本的
-            autorun();//改写的
+            autorun1();//改写的
             break;            
             
 
