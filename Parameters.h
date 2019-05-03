@@ -413,7 +413,7 @@ public:
     RC_Channel      single_servo_1, single_servo_2; // servos for two flaps
 #endif
 
-    // RC channels
+    // RC channels//标签：通道定义
     RC_Channel              rc_1;//roll
     RC_Channel              rc_2;//pitch
     RC_Channel              rc_3;//throttle
