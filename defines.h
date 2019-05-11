@@ -88,29 +88,32 @@
 // Auto Pilot modes
 // ----------------
 
-//活跃的模式//标签，模式定义
+//活跃的模式//标签，模式定义.除Reset外，本次仅提供3种模式,定义为-1则本次未使用
 #define STABILIZE 0                     // hold level position
 #define AUTO1 1
 #define AUTO2 2
+
 #define RESET 3
+
+#define Stabilize_1 -1
 
 //非活跃模式
 
-#define LOITER 1                        // Hold a single location
-#define CIRCLE 2                        // AUTO control
-#define LAND 3                          // AUTO control
-#define AUTO 4                          // AUTO control
-#define ACRO 7                          // rate control
-#define ALT_HOLD 5                      // AUTO control
-#define GUIDED 9                        // AUTO control
-#define RTL 6                           // AUTO control
-#define OF_LOITER 10                    // Hold a single location using optical flow sensor
-#define DRIFT 11                        // DRIFT mode (Note: 12 is no longer used)
-#define SPORT 13                        // earth frame rate control
-#define FLIP        14                  // flip the vehicle on the roll axis
-#define AUTOTUNE    15                  // auto tune the vehicle's roll and pitch gains
-#define POSHOLD     16                  // position hold with manual override
-#define NUM_MODES   17
+#define LOITER -1                        // Hold a single location
+#define CIRCLE -1                       // AUTO control
+#define LAND -1                          // AUTO control
+#define AUTO -1                          // AUTO control
+#define ACRO -1                          // rate control
+#define ALT_HOLD -1                      // AUTO control
+#define GUIDED -1                        // AUTO control
+#define RTL -1                           // AUTO control
+#define OF_LOITER -1                    // Hold a single location using optical flow sensor
+#define DRIFT -1                        // DRIFT mode (Note: 12 is no longer used)
+#define SPORT -1                        // earth frame rate control
+#define FLIP        -1                  // flip the vehicle on the roll axis
+#define AUTOTUNE    -1                  // auto tune the vehicle's roll and pitch gains
+#define POSHOLD     -1                  // position hold with manual override
+#define NUM_MODES   -1
 
 
 // CH_6 Tuning
