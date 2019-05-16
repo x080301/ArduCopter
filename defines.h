@@ -90,8 +90,11 @@
 
 //活跃的模式//标签，模式定义.除Reset外，本次仅提供3种模式,定义为-1则本次未使用
 #define STABILIZE 0                     // hold level position
-#define AUTO1 1
-#define AUTO2 2
+#define TEST1 1
+#define TEST2 2
+
+#define AUTO1 -1
+#define AUTO2 -1
 
 #define RESET 3
 

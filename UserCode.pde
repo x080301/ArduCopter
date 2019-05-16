@@ -1,6 +1,9 @@
 /// -*- tab-width: 4; Mode: C++; c-basic-offset: 4; indent-tabs-mode: nil -*-
+
+
 static int processflag = 0;
 static int AltHoldTime = 0;
+
 
 void takeoff(int TargetAlt)
 {
@@ -88,6 +91,20 @@ void AutoWpRun(Vector3f xyzTarget)
         processflag = 2;
     }
 }
+
+#if TEST2!=-1
+static int TestTime = 0;
+static int TestFlag = 0;
+void Test2()
+{
+    if (TestFlag = 0)
+        stabilize_run();
+    else
+        land_run();
+}
+#endif // Test2!=-1
+
+
 
 #if AUTO1!=-1
 void autorun1()//标签：我们的代码可以在这儿，以一个mode的形式，由遥控器选定后执行
@@ -210,13 +227,31 @@ void Stabilize()
     attitude_control.set_throttle_out(pilot_throttle_scaled, true);
     */
 
+
+
+    //若电机未启动
+    // if not auto armed, set throttle to zero and exit immediately
+    if (!ap.auto_armed) {
+        // initialise wpnav targets
+        wp_nav.shift_wp_origin_to_current_pos();
+        // reset attitude control targets
+        attitude_control.relax_bf_rate_controller();
+        attitude_control.set_yaw_target_to_current_heading();
+        attitude_control.set_throttle_out(0, false);
+        // tell motors to do a slow start
+        motors.slow_start(true);
+        return;
+    }
+
     // 获取由3号通道传入的值，以控制升降及升降速度
     float ZSpeed = get_pilot_desired_Z_Speed(g.rc_3.control_in);
     pos_control.set_speed_z(fabs(ZSpeed), fabs(ZSpeed));
     if (ZSpeed > 0)
         pos_control.set_alt_target(inertial_nav.get_altitude() + 200);
-    else
+    else if (ZSpeed < 0)
         pos_control.set_alt_target(inertial_nav.get_altitude() - 200);
+    else
+        pos_control.set_alt_target(inertial_nav.get_altitude());
     pos_control.update_z_controller();
 
     // call attitude controller         一番处理后这里在输出姿态控制值，水平面内的移动也在这里实现
@@ -262,14 +297,14 @@ void userhook_SlowLoop()
 }
 #endif
 
-#define USERHOOK_SUPERSLOWLOOP
+
 #ifdef USERHOOK_SUPERSLOWLOOP
 void userhook_SuperSlowLoop()
 {
     // put your 1Hz code here
-    if (AltHoldTime++ > 60)
+    if (TestTime++ > 90)
     {
-        processflag = 2;
+        TestFlag = 1;
     }
 }
 #endif

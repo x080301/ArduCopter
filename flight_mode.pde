@@ -124,28 +124,52 @@ static bool set_mode(uint8_t mode)
 
 // update_flight_mode - calls the appropriate attitude controllers based on flight mode
 // called at 100hz or more
+
 static void update_flight_mode()
 {
     switch (control_mode) {
 
+#if STABILIZE!=-1
     case STABILIZE://飞控控制无人机保持稳定，同时接收遥控器数据。可用于起飞降落
-    #if FRAME_CONFIG == HELI_FRAME
+#if FRAME_CONFIG == HELI_FRAME
         heli_stabilize_run();
-    #else
+#else
         stabilize_run();
-    #endif
+#endif
         break;
+#endif // STABILIZE!=-1
 
-
+#if AUTO1!=-1
     case AUTO1://测试程序1，起飞1m，悬停60s，降落        
         autorun1();
         break;
+#endif // AUTO1!=-1
+        
+#if AUTO2!=-1
     case AUTO2://测试程序2，起飞，向东飞行50m，降落
         autorun2();
         break;
+#endif // AUTO2!=-1
+
+#if RESET!=-1
     case RESET://重启测试程序中会用到的参数
         reset();
         break;
+#endif // RESET!=-1  
+
+#if TEST1!=-1
+    case TEST1:
+        land_run();
+        break;
+#endif // Test1!=-1
+
+#if TEST2!=-1
+    case TEST2:
+        Test2();
+        break;
+#endif // Test2!=-1
+
+
 
 
         /*
