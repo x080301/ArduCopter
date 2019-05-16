@@ -1615,5 +1615,5 @@ static void tuning(){
     }
 }
 
-AP_HAL_MAIN();标签：主程序
+AP_HAL_MAIN();//标签：主程序
 

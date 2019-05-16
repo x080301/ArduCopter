@@ -157,7 +157,7 @@ static void update_flight_mode()
         break;
 #endif // RESET>=0
 
-#if TEST1>=0
+#if TEST1!=-1
     case TEST1:
         land_run();
         break;
