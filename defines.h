@@ -94,29 +94,29 @@
 #define TEST2 2
 
 #define AUTO1 -1
-#define AUTO2 -1
+#define AUTO2 -2
 
 #define RESET 3
 
-#define Stabilize_1 -1
+#define Stabilize_1 -3
 
 //非活跃模式
 
-#define LOITER -1                        // Hold a single location
-#define CIRCLE -1                       // AUTO control
-#define LAND -1                          // AUTO control
-#define AUTO -1                          // AUTO control
-#define ACRO -1                          // rate control
-#define ALT_HOLD -1                      // AUTO control
-#define GUIDED -1                        // AUTO control
-#define RTL -1                           // AUTO control
-#define OF_LOITER -1                    // Hold a single location using optical flow sensor
-#define DRIFT -1                        // DRIFT mode (Note: 12 is no longer used)
-#define SPORT -1                        // earth frame rate control
-#define FLIP        -1                  // flip the vehicle on the roll axis
-#define AUTOTUNE    -1                  // auto tune the vehicle's roll and pitch gains
-#define POSHOLD     -1                  // position hold with manual override
-#define NUM_MODES   -1
+#define LOITER -4                        // Hold a single location
+#define CIRCLE -5                       // AUTO control
+#define LAND -6                          // AUTO control
+#define AUTO -7                          // AUTO control
+#define ACRO -8                          // rate control
+#define ALT_HOLD -9                      // AUTO control
+#define GUIDED -10                        // AUTO control
+#define RTL -11                           // AUTO control
+#define OF_LOITER -12                    // Hold a single location using optical flow sensor
+#define DRIFT -13                        // DRIFT mode (Note: 12 is no longer used)
+#define SPORT -14                        // earth frame rate control
+#define FLIP        -15                  // flip the vehicle on the roll axis
+#define AUTOTUNE    -16                  // auto tune the vehicle's roll and pitch gains
+#define POSHOLD     -17                  // position hold with manual override
+#define NUM_MODES   -18
 
 
 // CH_6 Tuning

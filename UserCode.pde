@@ -92,7 +92,7 @@ void AutoWpRun(Vector3f xyzTarget)
     }
 }
 
-#if TEST2!=-1
+#if TEST2>=0
 static int TestTime = 0;
 static int TestFlag = 0;
 void Test2()
@@ -102,11 +102,11 @@ void Test2()
     else
         land_run();
 }
-#endif // Test2!=-1
+#endif // Test2!>=0
 
 
 
-#if AUTO1!=-1
+#if AUTO1>=0
 void autorun1()//标签：我们的代码可以在这儿，以一个mode的形式，由遥控器选定后执行
 {
     if (processflag == 0)
@@ -127,7 +127,7 @@ void autorun1()//标签：我们的代码可以在这儿，以一个mode的形�
 }
 #endif
 
-#if AUTO2!=-1
+#if AUTO2>=0
 void autorun2()
 {
     if (processflag == 0)
@@ -151,7 +151,7 @@ void autorun2()
 }
 #endif
 
-#if RESET!=-1
+#if RESET>=0
 void reset()//重设各初始测试量
 {
     processflag = 0;
@@ -159,7 +159,7 @@ void reset()//重设各初始测试量
 }
 #endif
 
-#if Stabilize_1!=-1
+#if Stabilize_1>=0
 float get_pilot_desired_Z_Speed(int16_t z_SpeedControl)
 {
     float SpeedOut;

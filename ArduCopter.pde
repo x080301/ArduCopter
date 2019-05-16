@@ -891,6 +891,7 @@ static const AP_Scheduler::Task scheduler_tasks[] PROGMEM = {
 #ifdef USERHOOK_SLOWLOOP
     { userhook_SlowLoop,     30,    100 },
 #endif
+#define USERHOOK_SUPERSLOWLOOP
 #ifdef USERHOOK_SUPERSLOWLOOP
     { userhook_SuperSlowLoop,100,   100 },
 #endif
@@ -1613,6 +1614,6 @@ static void tuning(){
         break;
     }
 }
-#define USERHOOK_SUPERSLOWLOOP
+
 AP_HAL_MAIN();标签：主程序
 
