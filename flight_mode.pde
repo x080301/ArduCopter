@@ -128,6 +128,7 @@ static bool set_mode(uint8_t mode)
 static void update_flight_mode()
 {
     switch (control_mode) {
+   
 
 #if STABILIZE>=0
     case STABILIZE://飞控控制无人机保持稳定，同时接收遥控器数据。可用于起飞降落

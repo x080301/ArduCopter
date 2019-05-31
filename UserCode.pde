@@ -302,7 +302,7 @@ void userhook_SlowLoop()
 void userhook_SuperSlowLoop()
 {
     // put your 1Hz code here
-    if (TestTime++ > 90)
+    if (TestTime++ > 20)
     {
         TestFlag = 1;
     }
