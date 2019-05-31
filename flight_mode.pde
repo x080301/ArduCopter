@@ -1,5 +1,7 @@
 /// -*- tab-width: 4; Mode: C++; c-basic-offset: 4; indent-tabs-mode: nil -*-
-
+#if STABILIZERE>=0
+#include "ZStabilizeRe.h"
+#endif
 /*
  * flight.pde - high level calls to set and update flight modes
  *      logic for individual flight modes is in control_acro.pde, control_stabilize.pde, etc
@@ -172,7 +174,6 @@ static void update_flight_mode()
 #endif // Test2>=0
 #if STABILIZERE>=0
     case STABILIZERE:
-        #include "ZStabilizeRe.h"
         StabilizeRe();
         break;
 #endif

@@ -156,8 +156,6 @@ void reset()//重设各初始测试量
 {
     processflag = 0;
     AltHoldTime = 0;
-    TestTime = 0;
-    TestFlag = 0;
 }
 #endif
 
@@ -204,9 +202,6 @@ void userhook_SlowLoop()
 void userhook_SuperSlowLoop()
 {
     // put your 1Hz code here
-    if (TestTime++ > 60)
-    {
-        TestFlag = 1;
-    }
+
 }
 #endif

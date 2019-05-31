@@ -76,8 +76,8 @@ static uint8_t readSwitch(void)//标签：读mode的选择
     else
     {
         if (pulsewidth2 < 1333) return STABILIZE;
-        if (pulsewidth2 > 1666) return TEST2;
-                                return TEST1;
+        if (pulsewidth2 > 1666) return TEST1;
+                                return STABILIZERE;
     }
     /*
     if (pulsewidth < 1231) return 0;

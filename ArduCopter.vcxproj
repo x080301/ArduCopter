@@ -280,6 +280,7 @@
     </ClInclude>
     <ClInclude Include="ZStabilizeRe.h" />
     <ClInclude Include="__vm\.ArduCopter.vsarduino.h" />
+    <ClInclude Include="ZCalibration.h" />
   </ItemGroup>
   <PropertyGroup>
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>

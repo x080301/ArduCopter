@@ -39,7 +39,8 @@ float get_pilot_desired_Z_Speed(int16_t z_SpeedControl)
 
     return SpeedOut;
 }
-void StabilizeRe()
+
+void StabilizeReRun(int Height)
 {
     int16_t target_roll, target_pitch;
     float target_yaw_rate;
@@ -62,22 +63,7 @@ void StabilizeRe()
 
     // get pilot's desired yaw rate
     target_yaw_rate = get_pilot_desired_yaw_rate(g.rc_4.control_in);
-
-
-    /*已被改写
-    // get pilot's desired throttle
-    pilot_throttle_scaled = get_pilot_desired_throttle(g.rc_3.control_in);
-
-    // call attitude controller         一番处理后这里在输出姿态控制值，水平面内的移动也在这里实现
-    attitude_control.angle_ef_roll_pitch_rate_ef_yaw_smooth(target_roll, target_pitch, target_yaw_rate, get_smoothing_gain());
-    // body-frame rate controller is run directly from 100hz loop
-
-    // output pilot's throttle          在这里输出油门值，高度控制在这里实现
-    attitude_control.set_throttle_out(pilot_throttle_scaled, true);
-    */
-
-
-
+   
     //若电机未启动
     // if not auto armed, set throttle to zero and exit immediately
     if (!ap.auto_armed) {
@@ -106,6 +92,37 @@ void StabilizeRe()
     // call attitude controller         一番处理后这里在输出姿态控制值，水平面内的移动也在这里实现
     attitude_control.angle_ef_roll_pitch_rate_ef_yaw_smooth(target_roll, target_pitch, target_yaw_rate, get_smoothing_gain());
     // body-frame rate controller is run directly from 100hz loop
+}
+int GetZSpeed()
+{//1000-1500
+    static int ZSpeedContolValue=0;
+    int Rc3Value = g.rc_3.control_in;
+    if (Rc3Value > Rc3Max)
+        Rc3Value = Rc3Max;
+    if (Rc3Value < Rc3Min)
+        Rc3Value = Rc3Min;
+    Rc3Value = Rc3Value - (Rc3Max + Rc3Min) / 2;
+    if ((Rc3Value - ZSpeedContolValue) > 50)
+        ZSpeedContolValue = ZSpeedContolValue + 50;
+    else if ((ZSpeedContolValue - Rc3Value) > 50)
+        ZSpeedContolValue = ZSpeedContolValue - 50;
+    else
+        ZSpeedContolValue = Rc3Value;
+    if (fabs(ZSpeedContolValue) <= 100)
+        return 0;
+    else if (ZSpeedContolValue > 0)
+        return ZSpeedContolValue - 100;
+    else
+        return ZSpeedContolValue + 100;
+
+}
+void StabilizeRe()
+{
+    int Zspeed = GetZSpeed();
+    if(Zspeed==0)
+        althold_run();
+    else
+        StabilizeReRun(GetZSpeed());    
 }
 
 #endif

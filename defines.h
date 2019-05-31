@@ -87,18 +87,20 @@
 
 // Auto Pilot modes
 // ----------------
-
+//用户定义变量
+static int Rc3Max = 2000;
+static int Rc3Min = 1000;
 //活跃的模式//标签，模式定义.除Reset外，本次仅提供3种模式,定义为-1则本次未使用
 #define STABILIZE 0                     // hold level position
 #define TEST1 1
-#define TEST2 2
+#define TEST2 -2
 
 #define AUTO1 -1
 #define AUTO2 -2
 
 #define RESET 3
 
-#define STABILIZERE -3
+#define STABILIZERE 2
 
 //非活跃模式
 
