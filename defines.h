@@ -98,7 +98,7 @@
 
 #define RESET 3
 
-#define Stabilize_1 -3
+#define STABILIZERE -3
 
 //非活跃模式
 

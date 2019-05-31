@@ -388,6 +388,7 @@ static union {
 // This is the state of the flight control system
 // There are multiple states defined such as STABILIZE, ACRO,
 static int8_t control_mode = STABILIZE;
+static int8_t NewControlModeSwitch = STABILIZE;
 // Used to maintain the state of the previous control switch position
 // This is set to -1 when we need to re-read the switch
 static uint8_t oldSwitchPosition;
@@ -759,6 +760,15 @@ static void pre_arm_checks(bool display_failure);
 // setup the var_info table
 AP_Param param_loader(var_info);
 
+//标签：按频率执行的文件
+#ifndef USERHOOK_SUPERSLOWLOOP
+#define USERHOOK_SUPERSLOWLOOP
+#endif // !USERHOOK_SUPERSLOWLOOP
+
+#ifndef USERHOOK_50HZLOOP
+#define USERHOOK_50HZLOOP
+#endif // !USERHOOK_50HZLOOP
+
 #if MAIN_LOOP_RATE == 400
 /*
   scheduler table for fast CPUs - all regular tasks apart from the fast_loop()
@@ -775,7 +785,7 @@ AP_Param param_loader(var_info);
   400  = 1hz
   4000 = 0.1hz
   
- *///标签：按频率执行的文件
+ */
 static const AP_Scheduler::Task scheduler_tasks[] PROGMEM = {
     { rc_loop,               4,     10 },
     { throttle_loop,         8,     45 },
@@ -891,7 +901,6 @@ static const AP_Scheduler::Task scheduler_tasks[] PROGMEM = {
 #ifdef USERHOOK_SLOWLOOP
     { userhook_SlowLoop,     30,    100 },
 #endif
-#define USERHOOK_SUPERSLOWLOOP
 #ifdef USERHOOK_SUPERSLOWLOOP
     { userhook_SuperSlowLoop,100,   100 },
 #endif

@@ -62,8 +62,8 @@
     <None Include="setup.pde" />
     <None Include="switches.pde" />
     <None Include="system.pde" />
-    <None Include="test.pde" />
     <None Include="UserCode.pde" />
+    <None Include="test.pde" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.ArduCopter.vsarduino.h">
@@ -94,6 +94,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UserVariables.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZStabilizeRe.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

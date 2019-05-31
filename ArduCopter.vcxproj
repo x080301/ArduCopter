@@ -278,6 +278,7 @@
     <ClInclude Include="UserVariables.h">
       <FileType>CppCode</FileType>
     </ClInclude>
+    <ClInclude Include="ZStabilizeRe.h" />
     <ClInclude Include="__vm\.ArduCopter.vsarduino.h" />
   </ItemGroup>
   <PropertyGroup>

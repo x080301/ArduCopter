@@ -1,6 +1,34 @@
 /// -*- tab-width: 4; Mode: C++; c-basic-offset: 4; indent-tabs-mode: nil -*-
 
 #define CONTROL_SWITCH_COUNTER  20  // 20 iterations at 100hz (i.e. 2/10th of a second) at a new switch position will cause flight mode change
+static void ReadControlSwitch()
+/*
+    放在50Hz循环中，检测遥控器是否变换到新的模式，若检测到10次新模式，则换到该模式
+*/
+{
+    static uint8_t SwitchCounter = 10;
+    static uint8_t SwitchPostionStoring = STABILIZE;
+    uint8_t SwitchPosition = readSwitch();
+
+    if (SwitchPosition == SwitchPostionStoring)
+    {
+        SwitchCounter++;
+        if (SwitchCounter >= 20)
+        {
+            NewControlModeSwitch = SwitchPosition;
+            SwitchCounter = 10;
+        }
+    }
+    else
+    {
+        SwitchCounter--;
+        if (SwitchCounter < 10)
+        {
+            SwitchPostionStoring = SwitchPosition;
+            SwitchCounter = 10;
+        }
+    }
+}
 static void read_control_switch()
 {
     static uint8_t switch_counter = 0;

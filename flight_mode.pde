@@ -127,8 +127,9 @@ static bool set_mode(uint8_t mode)
 
 static void update_flight_mode()
 {
-    switch (control_mode) {
-   
+   // switch (control_mode) {
+   switch(NewControlModeSwitch)
+   {
 
 #if STABILIZE>=0
     case STABILIZE://飞控控制无人机保持稳定，同时接收遥控器数据。可用于起飞降落
@@ -158,7 +159,7 @@ static void update_flight_mode()
         break;
 #endif // RESET>=0
 
-#if TEST1!=-1
+#if TEST1>=0
     case TEST1:
         land_run();
         break;
@@ -169,7 +170,12 @@ static void update_flight_mode()
         Test2();
         break;
 #endif // Test2>=0
-
+#if STABILIZERE>=0
+    case STABILIZERE:
+        #include "ZStabilizeRe.h"
+        StabilizeRe();
+        break;
+#endif
 
 
 
