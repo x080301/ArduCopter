@@ -94,11 +94,11 @@ static int Rc3Min = 1000;
 #define STABILIZE 0                     // hold level position
 #define TEST1 1
 #define TEST2 -2
-
+#define CALIBRATION -1
 #define AUTO1 -1
 #define AUTO2 -2
 
-#define RESET 3
+#define RESET -1
 
 #define STABILIZERE 2
 

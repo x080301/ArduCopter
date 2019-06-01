@@ -1,8 +1,8 @@
 /// -*- tab-width: 4; Mode: C++; c-basic-offset: 4; indent-tabs-mode: nil -*-
+#if CALIBRATION>0
+#include "ZCalibration.h"
+#endif
 
-
-static int processflag = 0;
-static int AltHoldTime = 0;
 
 
 void takeoff(int TargetAlt)
@@ -171,6 +171,11 @@ void userhook_init()
 #ifdef USERHOOK_FASTLOOP
 void userhook_FastLoop()
 {
+#if CALIBRATION>0
+    if (NewControlModeSwitch == CALIBRATION)
+        CalibrationRc3MaxMin();
+#endif // CALIBRATION>0
+
     // put your 100Hz code here
 }
 #endif

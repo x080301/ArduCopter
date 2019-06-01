@@ -133,6 +133,11 @@ static void update_flight_mode()
    switch(NewControlModeSwitch)
    {
 
+#if STABILIZERE>=0
+   case STABILIZERE:
+       StabilizeRe();
+#endif
+
 #if STABILIZE>=0
     case STABILIZE://飞控控制无人机保持稳定，同时接收遥控器数据。可用于起飞降落
 #if FRAME_CONFIG == HELI_FRAME
@@ -177,6 +182,16 @@ static void update_flight_mode()
         StabilizeRe();
         break;
 #endif
+#if ALT_HOLD>0
+    case ALT_HOLD://定高模式：除非大幅度更改遥控器油门值，否则无人机保持现有油门量不变
+        althold_run();
+        break;
+#endif
+#if AUTO>0
+    case AUTO://在GPS引导下，按预定任务进行飞行
+        auto_run();
+        break;
+#endif // AUTO>0
 
 
 
@@ -194,15 +209,10 @@ static void update_flight_mode()
 
 
             /*
-        case ALT_HOLD://定高模式：除非大幅度更改遥控器油门值，否则无人机保持现有油门量不变
-            althold_run();
-            break;
+
             
 
-        case AUTO://在GPS引导下，按预定任务进行飞行
-                        
-            auto_run();
-            break;            
+           
             
 
         case CIRCLE://以当前位置为圆心，机头指向圆心进行绕圈

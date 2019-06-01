@@ -769,6 +769,10 @@ AP_Param param_loader(var_info);
 #define USERHOOK_50HZLOOP
 #endif // !USERHOOK_50HZLOOP
 
+#ifndef USERHOOK_FASTLOOP
+#define USERHOOK_FASTLOOP
+#endif // !USERHOOK_FASTLOOP
+
 #if MAIN_LOOP_RATE == 400
 /*
   scheduler table for fast CPUs - all regular tasks apart from the fast_loop()
