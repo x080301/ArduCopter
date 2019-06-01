@@ -2,9 +2,14 @@
 #if CALIBRATION>0
 #include "ZCalibration.h"
 #endif
+#if AUTOWITHGPS>0
+#include "ZAutoWithGPS.h"
+#endif // AUTOWITHGPS>0
+#if STABILIZERE>0
+#include "ZStabilizeRe.h"
+#endif // STABILIZERE>0
 
-
-
+/*
 void takeoff(int TargetAlt)
 {
     //若电机未启动
@@ -44,6 +49,7 @@ void takeoff(int TargetAlt)
         processflag = 1;
     }
 }
+
 void AutoWpRun(Vector3f xyzTarget)
 {
     // if not auto armed set throttle to zero and exit immediately
@@ -91,7 +97,7 @@ void AutoWpRun(Vector3f xyzTarget)
         processflag = 2;
     }
 }
-
+*/
 #if TEST2>=0
 static int TestTime = 0;
 static int TestFlag = 0;
@@ -106,26 +112,7 @@ void Test2()
 
 
 
-#if AUTO1>=0
-void autorun1()//标签：我们的代码可以在这儿，以一个mode的形式，由遥控器选定后执行
-{
-    if (processflag == 0)
-    {
-        //起飞
-        takeoff(100);
-    }
-    else if (processflag == 1)
-    {
-        althold_run();
-        //悬停
-    }
-    else
-    {
-        //降落
-        land_run();
-    }
-}
-#endif
+
 
 #if AUTO2>=0
 void autorun2()
@@ -154,8 +141,8 @@ void autorun2()
 #if RESET>=0
 void reset()//重设各初始测试量
 {
-    processflag = 0;
-    AltHoldTime = 0;
+    AutoWithGPSReset();
+    StabilizeReReset();
 }
 #endif
 
@@ -175,6 +162,9 @@ void userhook_FastLoop()
     if (NewControlModeSwitch == CALIBRATION)
         CalibrationRc3MaxMin();
 #endif // CALIBRATION>0
+#ifdef ARRIVEDCOUNTER
+    ArrivedCounter();
+#endif // ARRIVEDCOUNTER
 
     // put your 100Hz code here
 }

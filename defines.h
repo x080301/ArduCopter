@@ -91,22 +91,29 @@
 static int Rc3Max = 2000;
 static int Rc3Min = 1000;
 //活跃的模式//标签，模式定义.除Reset外，本次仅提供3种模式,定义为-1则本次未使用
-#define STABILIZE 0                     // hold level position
-#define TEST1 1
+
+
+#define LAND 1                          // AUTO control
+#define STABILIZERE 2
+#define AUTOWITHGPS 3
+#define RESET 4
+
+#define STABILIZE -1                     // hold level position
+#define TEST1 -1
+
 #define TEST2 -2
 #define CALIBRATION -1
 #define AUTO1 -1
 #define AUTO2 -2
 
-#define RESET -1
 
-#define STABILIZERE 2
+
 
 //非活跃模式
 
 #define LOITER -4                        // Hold a single location
 #define CIRCLE -5                       // AUTO control
-#define LAND -6                          // AUTO control
+
 #define AUTO -7                          // AUTO control
 #define ACRO -8                          // rate control
 #define ALT_HOLD -9                      // AUTO control

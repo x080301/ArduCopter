@@ -132,10 +132,16 @@ static void update_flight_mode()
    // switch (control_mode) {
    switch(NewControlModeSwitch)
    {
+#if AUTOWITHGPS>=0
+   case AUTOWITHGPS:
+       AutoWithiGPS();
+       break;
+#endif
 
 #if STABILIZERE>=0
    case STABILIZERE:
        StabilizeRe();
+       break;
 #endif
 
 #if STABILIZE>=0
@@ -177,11 +183,7 @@ static void update_flight_mode()
         Test2();
         break;
 #endif // Test2>=0
-#if STABILIZERE>=0
-    case STABILIZERE:
-        StabilizeRe();
-        break;
-#endif
+
 #if ALT_HOLD>0
     case ALT_HOLD://定高模式：除非大幅度更改遥控器油门值，否则无人机保持现有油门量不变
         althold_run();
@@ -192,6 +194,11 @@ static void update_flight_mode()
         auto_run();
         break;
 #endif // AUTO>0
+#if LAND>0
+    case LAND://降落
+        land_run();
+        break;
+#endif // LAND>0
 
 
 
@@ -230,9 +237,7 @@ static void update_flight_mode()
             break;
             
 
-        case LAND://降落
-            land_run();
-            break;
+
 
             
         case RTL://GPS引导下自动返航<-返航位置见控制模式详解

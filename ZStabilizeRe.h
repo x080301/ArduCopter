@@ -14,10 +14,15 @@
 #define AltHold 2
 static int StabilizeReMode = OnGround;
 
-static void DoTakeoff()
+void StabilizeReReset()
+{
+    StabilizeReMode = OnGround;
+}
+
+void StabilizeReDoTakeoff(float TakeoffAlt)
 {
     // Set wp navigation target to safe altitude above current position
-    float takeoff_alt = 300;
+    float takeoff_alt = TakeoffAlt;
     takeoff_alt = max(takeoff_alt, current_loc.alt);
 
     // initialise wpnav destination
@@ -37,7 +42,7 @@ void StabilizeRe()
     switch (StabilizeReMode)
     {
     case OnGround:
-        DoTakeoff();
+        StabilizeReDoTakeoff(300);
         StabilizeReMode = TakeOff;
         break;
     case TakeOff:

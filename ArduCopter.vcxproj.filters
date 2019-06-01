@@ -102,5 +102,8 @@
     <ClInclude Include="ZCalibration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ZAutoWithGPS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

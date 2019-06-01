@@ -388,7 +388,7 @@ static union {
 // This is the state of the flight control system
 // There are multiple states defined such as STABILIZE, ACRO,
 static int8_t control_mode = STABILIZE;
-static int8_t NewControlModeSwitch = STABILIZE;
+static int8_t NewControlModeSwitch = 1;
 // Used to maintain the state of the previous control switch position
 // This is set to -1 when we need to re-read the switch
 static uint8_t oldSwitchPosition;

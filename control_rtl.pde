@@ -38,9 +38,12 @@ static void rtl_run()
                 rtl_land_start();
             }
             break;
-        case FinalDescent:
+            /* 
+            case FinalDescent:
             // do nothing
             break;
+            */
+       
         case Land:
             // do nothing - rtl_land_run will take care of disarming motors
             break;
@@ -61,10 +64,10 @@ static void rtl_run()
     case LoiterAtHome:
         rtl_loiterathome_run();
         break;
-
-    case FinalDescent:
+/*case FinalDescent:
         rtl_descent_run();
-        break;
+        break;*/
+    
 
     case Land:
         rtl_land_run();
@@ -305,7 +308,7 @@ static void rtl_descent_run()
 // rtl_loiterathome_start - initialise controllers to loiter over home
 static void rtl_land_start()
 {
-    rtl_state = Land;
+    //rtl_state = Land;
     rtl_state_complete = false;
 
     // Set wp navigation target to above home
