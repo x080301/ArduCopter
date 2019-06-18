@@ -9,14 +9,14 @@
 	#include "WProgram.h"
 #endif
 
-#define OnGround 0
-#define TakeOff 1
-#define AltHold 2
-static int StabilizeReMode = OnGround;
+#define SROnGround 0
+#define SRTakeOff 1
+#define SRAltHold 2
+static int StabilizeReMode = SROnGround;
 
 void StabilizeReReset()
 {
-    StabilizeReMode = OnGround;
+    StabilizeReMode = SROnGround;
 }
 
 void StabilizeReDoTakeoff(float TakeoffAlt)
@@ -41,16 +41,16 @@ void StabilizeRe()
 {
     switch (StabilizeReMode)
     {
-    case OnGround:
+    case SROnGround:
         StabilizeReDoTakeoff(300);
-        StabilizeReMode = TakeOff;
+        StabilizeReMode = SRTakeOff;
         break;
-    case TakeOff:
+    case SRTakeOff:
         auto_takeoff_run();
         if (current_loc.alt >= 300)
-            StabilizeReMode = AltHold;
+            StabilizeReMode = SRAltHold;
         break;
-    case AltHold:
+    case SRAltHold:
         althold_run();
         break;
     default:

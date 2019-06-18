@@ -388,7 +388,7 @@ static union {
 // This is the state of the flight control system
 // There are multiple states defined such as STABILIZE, ACRO,
 static int8_t control_mode = STABILIZE;
-static int8_t NewControlModeSwitch = 1;
+static int8_t NewControlModeSwitch = 0;
 // Used to maintain the state of the previous control switch position
 // This is set to -1 when we need to re-read the switch
 static uint8_t oldSwitchPosition;
@@ -848,7 +848,7 @@ static const AP_Scheduler::Task scheduler_tasks[] PROGMEM = {
   should be listed here, along with how often they should be called
   (in 10ms units) and the maximum time they are expected to take (in
   microseconds)
-  1    = 100hz
+  1    = 100hz=100Hz/1
   2    = 50hz
   4    = 25hz
   10   = 10hz
@@ -881,10 +881,12 @@ static const AP_Scheduler::Task scheduler_tasks[] PROGMEM = {
     { one_hz_loop,         100,     420 },
     { ekf_dcm_check,        10,      20 },
     { crash_check,          10,      20 },
+    //
     { gcs_check_input,	     2,     550 },
-    { gcs_send_heartbeat,  100,     150 },
+    { GcsSendHeartBeat,  100,     150 },
     { gcs_send_deferred,     2,     720 },
     { gcs_data_stream_send,  2,     950 },
+    //
     { update_mount,          2,     450 },
     { ten_hz_logging_loop,  10,     300 },
     { fifty_hz_logging_loop, 2,     220 },

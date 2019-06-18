@@ -134,7 +134,7 @@ static void update_flight_mode()
    {
 #if AUTOWITHGPS>=0
    case AUTOWITHGPS:
-       AutoWithiGPS();
+       AutoWithGPS();
        break;
 #endif
 
@@ -196,6 +196,8 @@ static void update_flight_mode()
 #endif // AUTO>0
 #if LAND>0
     case LAND://降落
+        AutoWithGPSReset();
+        StabilizeReReset();
         land_run();
         break;
 #endif // LAND>0

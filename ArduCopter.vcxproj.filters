@@ -105,5 +105,8 @@
     <ClInclude Include="ZAutoWithGPS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ZGCSSend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

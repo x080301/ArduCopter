@@ -279,6 +279,7 @@
       <FileType>CppCode</FileType>
     </ClInclude>
     <ClInclude Include="ZAutoWithGPS.h" />
+    <ClInclude Include="ZGCSSend.h" />
     <ClInclude Include="ZStabilizeRe.h" />
     <ClInclude Include="__vm\.ArduCopter.vsarduino.h" />
     <ClInclude Include="ZCalibration.h" />
