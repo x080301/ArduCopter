@@ -769,9 +769,17 @@ AP_Param param_loader(var_info);
 #define USERHOOK_50HZLOOP
 #endif // !USERHOOK_50HZLOOP
 
+#ifndef USERHOOK_MEDIUMLOOP
+#define USERHOOK_MEDIUMLOOP
+#endif // !USERHOOK_MEDIUMLOOP
+
 #ifndef USERHOOK_FASTLOOP
 #define USERHOOK_FASTLOOP
 #endif // !USERHOOK_FASTLOOP
+
+
+
+
 
 #if MAIN_LOOP_RATE == 400
 /*
@@ -882,8 +890,8 @@ static const AP_Scheduler::Task scheduler_tasks[] PROGMEM = {
     { ekf_dcm_check,        10,      20 },
     { crash_check,          10,      20 },
     //
-    { gcs_check_input,	     2,     550 },
-    { GcsSendHeartBeat,  100,     150 },
+    //{ GetPacket,	         2,     550 },//{ gcs_check_input,	     2,     550 },//以50Hz的频率查看无线端口的信息并更新到gcs[1]gcs[2]中
+    //{ GcsSendHeartBeat,     10,     150 },//心跳包，原为1Hz
     { gcs_send_deferred,     2,     720 },
     { gcs_data_stream_send,  2,     950 },
     //

@@ -9,6 +9,9 @@
 #include "ZStabilizeRe.h"
 #endif // STABILIZERE>0
 
+#include "ZGCSSend.h"
+
+
 /*
 void takeoff(int TargetAlt)
 {
@@ -174,6 +177,7 @@ void userhook_FastLoop()
 void userhook_50Hz()
 {
     ReadControlSwitch();
+    GetPacket();//{ gcs_check_input,	     2,     550 },//以50Hz的频率查看无线端口的信息并更新及处理
     // put your 50Hz code here
 }
 #endif
@@ -181,6 +185,7 @@ void userhook_50Hz()
 #ifdef USERHOOK_MEDIUMLOOP
 void userhook_MediumLoop()
 {
+    GcsSendHeartBeat();//心跳包，原为1Hz
     // put your 10Hz code here
 }
 #endif
@@ -195,8 +200,7 @@ void userhook_SlowLoop()
 
 #ifdef USERHOOK_SUPERSLOWLOOP
 void userhook_SuperSlowLoop()
-{
+{    
     // put your 1Hz code here
-
 }
 #endif

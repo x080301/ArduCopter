@@ -1,10 +1,6 @@
-C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\ArduCopter.cpp.o: \
- C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\ArduCopter.cpp \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Common/AP_Common.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Progmem/AP_Progmem.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL/AP_HAL_Boards.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Progmem/AP_Progmem_AVR.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Menu/AP_Menu.h \
+C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\GCS_Common.cpp.o: \
+ E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\GCS_MAVLink\GCS_Common.cpp \
+ E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\GCS_MAVLink/GCS.h \
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL/AP_HAL.h \
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL/AP_HAL_Namespace.h \
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL/utility/FastDelegate.h \
@@ -15,6 +11,9 @@ C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\D
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL/utility/../AP_HAL_Namespace.h \
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL/utility/Stream.h \
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL/utility/Print.h \
+ E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Progmem/AP_Progmem.h \
+ E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL/AP_HAL_Boards.h \
+ E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Progmem/AP_Progmem_AVR.h \
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL/I2CDriver.h \
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL/SPIDriver.h \
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL/AnalogIn.h \
@@ -36,27 +35,10 @@ C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\D
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL/../AP_HAL/GPIO.h \
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL/../AP_HAL/RCInput.h \
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL/../AP_HAL/RCOutput.h \
+ E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Common/AP_Common.h \
+ E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\GCS_MAVLink/GCS_MAVLink.h \
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Param/AP_Param.h \
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Common/../StorageManager/StorageManager.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\StorageManager/StorageManager.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL_AVR/AP_HAL_AVR.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL_AVR/HAL_AVR_APM1_Class.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL_AVR/HAL_AVR_APM2_Class.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL_AVR/AP_HAL_AVR_Namespace.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL_AVR/AP_HAL_AVR_Main.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL_AVR_SITL/AP_HAL_AVR_SITL.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL_PX4/AP_HAL_PX4.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL_VRBRAIN/AP_HAL_VRBRAIN.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL_FLYMAPLE/AP_HAL_FLYMAPLE.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL_Linux/AP_HAL_Linux.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL_Empty/AP_HAL_Empty.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL_Empty/HAL_Empty_Class.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL_Empty/AP_HAL_Empty_Namespace.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL_Empty/PrivateMember.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL_Empty/AP_HAL_Empty.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_HAL_Empty/AP_HAL_Empty_Main.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\GCS_MAVLink/GCS.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\GCS_MAVLink/GCS_MAVLink.h \
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Math/AP_Math.h \
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Math/AP_Math_AVR_Compat.h \
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Math/rotations.h \
@@ -288,78 +270,4 @@ C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\D
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_ADC/AP_ADC_ADS7844.h \
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_ADC/AP_ADC.h \
  E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_ADC/AP_ADC_HIL.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_ADC_AnalogSource/AP_ADC_AnalogSource.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_GPS/AP_GPS_Glitch.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Baro/AP_Baro_Glitch.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Curve/AP_Curve.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_NavEKF/AP_NavEKF.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Math/vectorN.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Rally/AP_Rally.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AC_PID/AC_PID.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AC_PID/AC_HELI_PID.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AC_PID/AC_P.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AC_AttitudeControl/AC_AttitudeControl.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Motors/AP_Motors.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Motors/AP_Motors_Class.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Notify/AP_Notify.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Notify/AP_BoardLED.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Notify/ToshibaLED.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Notify/ToshibaLED_I2C.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Notify/ToshibaLED_PX4.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Notify/ToshibaLED.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Notify/ToneAlarm_PX4.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Notify/ToneAlarm_PX4.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Notify/ExternalLED.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Notify/Buzzer.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\RC_Channel/RC_Channel.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\RC_Channel/RC_Channel_aux.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\RC_Channel/RC_Channel.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Motors/AP_MotorsMatrix.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Motors/AP_MotorsTri.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Motors/AP_Motors.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Motors/AP_MotorsQuad.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Motors/AP_MotorsHexa.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Motors/AP_MotorsY6.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Motors/AP_MotorsMatrix.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Motors/AP_MotorsOcta.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Motors/AP_MotorsOctaQuad.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Motors/AP_MotorsHeli.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Motors/AP_MotorsSingle.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Motors/AP_MotorsCoax.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AC_AttitudeControl/AC_AttitudeControl_Heli.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AC_AttitudeControl/AC_PosControl.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_InertialNav/AP_InertialNav.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Buffer/AP_Buffer.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_RangeFinder/AP_RangeFinder.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_RangeFinder/RangeFinder.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_OpticalFlow/AP_OpticalFlow.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_OpticalFlow/AP_OpticalFlow_ADNS3080.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_OpticalFlow/AP_OpticalFlow.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Relay/AP_Relay.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_ServoRelayEvents/AP_ServoRelayEvents.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Camera/AP_Camera.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Mount/AP_Mount.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AC_WPNav/AC_WPNav.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AC_WPNav/AC_Circle.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AC_Fence/AC_Fence.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\SITL/SITL.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Scheduler/AP_Scheduler.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_RCMapper/AP_RCMapper.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_BattMonitor/AP_BattMonitor.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_BoardConfig/AP_BoardConfig.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Frsky_Telem/AP_Frsky_Telem.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AC_Sprayer/AC_Sprayer.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_EPM/AP_EPM.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Parachute/AP_Parachute.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Terrain/AP_Terrain.h \
- C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\compat.h \
- C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\defines.h \
- C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\config.h \
- C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\APM_Config.h \
- C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\config_channels.h \
- C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\Parameters.h \
- C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\heli.h \
- C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\ZAutoWithGPS.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Common/Arduino.h \
- C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\ZStabilizeRe.h \
- C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\ZGCSSend.h
+ E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_ADC_AnalogSource/AP_ADC_AnalogSource.h

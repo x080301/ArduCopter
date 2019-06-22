@@ -11,6 +11,7 @@
 #define AWGTakeOff 1
 #define AWGAutoWP 2
 #define AWGLand 3
+#define AWGIILand 4
 #define AWGTargetHeight 200.f//cm
 
 static int AutoWithGPSMode = AWGOnGround;
@@ -36,6 +37,11 @@ static void AutoWpStart(const Vector3f& destination)
 #define ARRIVEDCOUNTER
 static int ArrivedCounterValueWP = 0;
 static int ArrivedCounterValueTakeOff = 0;
+
+static void HandleParameter(float ZSpeed, float XSpeed, float YSpeed)//每个命令有效期最多持续2s
+{
+
+}
 static void ArrivedCounter() //100Hz
 {
     if (AutoWithGPSMode == AWGTakeOff)
@@ -50,7 +56,7 @@ static void ArrivedCounter() //100Hz
     }     
 }
 
-void AutoWithGPSDoTakeoff()
+static void AutoWithGPSDoTakeoff()
 {
     // Set wp navigation target to safe altitude above current position
     float takeoff_alt = AWGTargetHeight;
@@ -70,6 +76,10 @@ void AutoWithGPSDoTakeoff()
 
 }
 
+static int GetAutoMode()
+{
+    return AutoWithGPSMode;
+}
 static void LandGpsRun()
 {
     int16_t roll_control = 0, pitch_control = 0;
