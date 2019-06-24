@@ -10,14 +10,7 @@
 #endif
 #define UPSPEED 20.f
 #define DOWNSPEED -10.f
-void DoTakeoOff()
-{
-    DoUp_Xcm(400);
-    // tell motors to do a slow start
-    motors.slow_start(true);
-}
-
-static void DoUp_Xcm(int alt)
+void DoUp_Xcm(int alt)
 {
     Vector3f target_pos = inertial_nav.get_position();
     target_pos.z += alt;
@@ -25,6 +18,12 @@ static void DoUp_Xcm(int alt)
 
     // initialise yaw
     set_auto_yaw_mode(AUTO_YAW_HOLD);
+}
+void DoTakeoOff()
+{
+    DoUp_Xcm(400);
+    // tell motors to do a slow start
+    motors.slow_start(true);
 }
 //true:Up,false:Hold
 static void DoUpHoldControler(bool UpHold)

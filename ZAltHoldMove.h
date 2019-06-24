@@ -74,21 +74,22 @@ y   前   -   后
 void ZAltHoldMove(int mode,int direction)
 {
     //计算目标GPS点
+    Vector3f destination;
     switch (mode)
     {
     case 1:
-        Vector3f destination = inertial_nav.get_position();
+        destination = inertial_nav.get_position();
         destination.x += (direction > 0 ? 1 : -1) * 5000;
         DoMove(destination);
         break;
     case 2:
-        Vector3f destination = inertial_nav.get_position();
+        destination = inertial_nav.get_position();
         destination.y += (direction > 0 ? 1 : -1) * 5000;
         DoMove(destination);
         break;
     case 0:
     default:
-        Vector3f DoMove(inertial_nav.get_position());
+        DoMove(inertial_nav.get_position());
         break;
     }
     //执行飞行

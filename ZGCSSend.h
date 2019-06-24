@@ -1,3 +1,4 @@
+//ZGCSSend.h
 #ifndef _ZGCS_h
 #define _ZGCS_h
 #include "GCS.h"
@@ -28,7 +29,7 @@ bool SendLongCommand(mavlink_channel_t chan, mavlink_command_long_t packet)
     // wants to fire then don't send a mavlink message. We want to
     // prioritise the main flight control loop over communications
     if (scheduler.time_available_usec() < 250 && motors.armed()) {
-        gcs_out_of_time = true;
+        //gcs_out_of_time = true;
         return false;
     }
 #endif
