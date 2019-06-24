@@ -264,7 +264,7 @@ void AutoWithGPS()
             AutoWithGPSMode = AWGAutoWP;
             Vector3f xyzTarget;
             xyzTarget.operator()(500, 0,AWGTargetHeight);
-            //向东飞行50m
+            //向东飞行5m
             AutoWpStart(xyzTarget);
             ArrivedCounterValueWP = 0;
         }

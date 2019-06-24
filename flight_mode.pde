@@ -132,6 +132,13 @@ static void update_flight_mode()
    // switch (control_mode) {
    switch(NewControlModeSwitch)
    {
+#if TEST>=0
+   case TEST:
+       ZTest();
+       break;
+#endif // TEST>=0
+
+
 #if AUTOWITHGPS>=0
    case AUTOWITHGPS:
        AutoWithGPS();
@@ -196,13 +203,16 @@ static void update_flight_mode()
 #endif // AUTO>0
 #if LAND>0
     case LAND://降落
-        AutoWithGPSReset();
+        //AutoWithGPSReset();
         StabilizeReReset();
         land_run();
         break;
 #endif // LAND>0
-
-
+#if CIRCLE>0
+    case CIRCLE://以当前位置为圆心，机头指向圆心进行绕圈
+        circle_run();
+        break;
+#endif
 
         /*
         case ACRO://全手动控制
@@ -224,9 +234,7 @@ static void update_flight_mode()
            
             
 
-        case CIRCLE://以当前位置为圆心，机头指向圆心进行绕圈
-            circle_run();
-            break;
+      
             
 
         case LOITER://GPS（保持平面位置稳定）+气压计（保持高度稳定）

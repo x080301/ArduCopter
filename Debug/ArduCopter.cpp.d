@@ -359,7 +359,7 @@ C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\D
  C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\config_channels.h \
  C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\Parameters.h \
  C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\heli.h \
- C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\ZAutoWithGPS.h \
- E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Common/Arduino.h \
  C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\ZStabilizeRe.h \
+ E:\project\P181119_Infineon\Arduino\ArduPilot-Arduino-1.0.3-windows\libraries\AP_Common/Arduino.h \
+ C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\ZTest.h \
  C:\Users\admin\AppData\Local\Temp\VMBuilds\ArduCopter\apm_apm_avr_apm2_2560HAL\Debug\ZGCSSend.h

@@ -873,12 +873,19 @@ void GCS_MAVLINK::handleMessage(mavlink_message_t* msg)//包的处理
 
     switch (msg->msgid)
     {
-    case MAVLINK_MSG_ID_COMMAND_LONG:       // MAV ID: 76
+        
+    case MAVLINK_MSG_ID_HEARTBEAT://0
+        mavlink_command_long_t packet;
+        packet.command = (uint16_t)1;
+        SendLongCommand(chan, packet);
+    case MAVLINK_MSG_ID_COMMAND_LONG:       // MAV ID: 76    
     {
         // decode packet
         mavlink_command_long_t packet;
         mavlink_msg_command_long_decode(msg, &packet);
+        SendLongCommand(chan, packet);
 
+        /*本次试飞暂不管此处
         // 若包不是发往本机且本机不处于自动降落状态
         if (mavlink_check_target(packet.target_system, packet.target_component) || (GetAutoMode() != AWGIILand)) 
             break;
@@ -899,7 +906,7 @@ void GCS_MAVLINK::handleMessage(mavlink_message_t* msg)//包的处理
             break;
         default:
             break;
-        }
+        }*/
     }
     /*
        switch (msg->msgid) {

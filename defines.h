@@ -94,9 +94,10 @@ static int Rc3Min = 1000;
 
 #define STABILIZE 0                     // hold level position
 #define STABILIZERE 1
-#define AUTOWITHGPS 2
-#define LAND 3                          // AUTO control
+#define TEST 2
 
+#define LAND 3                          // AUTO control
+#define AUTOWITHGPS -1
 #define RESET -1
 
 

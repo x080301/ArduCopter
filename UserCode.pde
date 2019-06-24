@@ -8,6 +8,9 @@
 #if STABILIZERE>0
 #include "ZStabilizeRe.h"
 #endif // STABILIZERE>0
+#if TEST>0
+#include "ZTest.h"
+#endif
 
 #include "ZGCSSend.h"
 
@@ -186,6 +189,9 @@ void userhook_50Hz()
 void userhook_MediumLoop()
 {
     GcsSendHeartBeat();//心跳包，原为1Hz
+#if TEST>=0
+    TestTimeHandle();
+#endif // TEST>=0
     // put your 10Hz code here
 }
 #endif

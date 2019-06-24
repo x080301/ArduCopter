@@ -71,13 +71,13 @@ static uint8_t readSwitch(void)//标签：读mode的选择
     int16_t pulsewidth2 = g.rc_5.radio_in;
     if (pulsewidth1 > 1500)
     {
-        return LAND;
+        return 3;
     }
     else
     {
-        if (pulsewidth2 < 1333) return STABILIZE;
-        if (pulsewidth2 > 1666) return STABILIZERE;
-                                return AUTOWITHGPS;
+        if (pulsewidth2 < 1333) return 0;
+        if (pulsewidth2 > 1666) return 2;
+                                return 1;
     }
     /*
     if (pulsewidth < 1231) return 0;

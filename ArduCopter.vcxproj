@@ -251,6 +251,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ZAltHoldMove.h" />
     <ClInclude Include="APM_Config.h">
       <FileType>CppCode</FileType>
     </ClInclude>
@@ -281,6 +282,8 @@
     <ClInclude Include="ZAutoWithGPS.h" />
     <ClInclude Include="ZGCSSend.h" />
     <ClInclude Include="ZStabilizeRe.h" />
+    <ClInclude Include="ZTest.h" />
+    <ClInclude Include="ZZcomtrol.h" />
     <ClInclude Include="__vm\.ArduCopter.vsarduino.h" />
     <ClInclude Include="ZCalibration.h" />
   </ItemGroup>

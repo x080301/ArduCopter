@@ -108,5 +108,14 @@
     <ClInclude Include="ZGCSSend.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ZTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZAltHoldMove.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZZcomtrol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
